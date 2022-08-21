@@ -20,7 +20,8 @@ while True:
         name = input('Введите название папки:')
         os.mkdir(name)
     elif choice == '2':
-        pass
+        name = input('Введите название папки:')
+        os.rmdir(name)
     elif choice == '3':
         pass
     elif choice == '4':
