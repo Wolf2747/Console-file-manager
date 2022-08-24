@@ -1,5 +1,5 @@
 import os
-
+import shutil
 while True:
     print('1.Создание папки')
     print('2.Удалить (файл/папку)')
@@ -23,7 +23,9 @@ while True:
         name = input('Введите название папки:')
         os.rmdir(name)
     elif choice == '3':
-        pass
+        original_file = input('Введите название файла для копирования')
+        target_file = input('Введите новое название файла')
+        shutil.copy(original_file, target_file)
     elif choice == '4':
         pass
     elif choice == '5':
