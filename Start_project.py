@@ -1,6 +1,7 @@
 import os
 import shutil
 import sys
+from Functions.victory_Function import victory
 while True:
     print('1.Создание папки')
     print('2.Удалить (файл/папку)')
@@ -65,7 +66,7 @@ while True:
     elif choice == '8':
         print('Создатель программы: Wolf2747')
     elif choice == '9':
-        pass
+        victory()
     elif choice == '10':
         pass
     elif choice == '11':
