@@ -2,6 +2,7 @@ import os
 import shutil
 import sys
 from Functions.victory_Function import victory
+from Functions.Bank_account_Function import bank_account
 while True:
     print('1.Создание папки')
     print('2.Удалить (файл/папку)')
@@ -68,7 +69,7 @@ while True:
     elif choice == '9':
         victory()
     elif choice == '10':
-        pass
+        bank_account()
     elif choice == '11':
         pass
     elif choice == '12':
