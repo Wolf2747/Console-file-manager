@@ -3,6 +3,7 @@ import shutil
 import sys
 from Functions.victory_Function import victory
 from Functions.Bank_account_Function import bank_account
+from Functions.folders_and_files import output_folders_and_files
 while True:
     print('1.Создание папки')
     print('2.Удалить (файл/папку)')
@@ -14,8 +15,8 @@ while True:
     print('8.Создатель программы')
     print('9.Играть в викторину')
     print('10.Мой Банковский счет')
-    print('11.Смена рабочей дериктории')
-    print('12.Выход')
+    print('11.Выход')
+
 
     choice = input('Выберете пункт меню:')
 
@@ -33,34 +34,11 @@ while True:
         print(os.listdir())
     elif choice == '5':
 
-        dirname = '/py. Проекты/Console-file-manager/'
-        dirfiles = os.listdir(dirname)
+        output_folders_and_files(os.path.isdir)
 
-        fullpaths = map(lambda name: os.path.join(name), dirfiles)
-
-        dirs = []
-
-        for file in fullpaths:
-            if os.path.isdir(file):
-                dirs.append(file)
-
-        print(list(dirs))
     elif choice == '6':
-        import os
 
-        dirname = '/py. Проекты/Console-file-manager/'
-        dirfiles = os.listdir(dirname)
-
-        fullpaths = map(lambda name: os.path.join(name), dirfiles)
-
-        files = []
-
-        for file in fullpaths:
-
-            if os.path.isfile(file):
-                files.append(file)
-
-        print((list(files)))
+        output_folders_and_files(os.path.isfile)
 
     elif choice == '7':
         print(sys.platform)
@@ -71,8 +49,6 @@ while True:
     elif choice == '10':
         bank_account()
     elif choice == '11':
-        pass
-    elif choice == '12':
         break
     else:
         print('неверный пункт')
