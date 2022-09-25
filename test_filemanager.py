@@ -13,3 +13,8 @@ def test_copy():
     files = os.listdir()
     assert 'test_pythonana.py' in files
     os.remove('test_pythonana.py')
+def test_mkdir():
+    os.mkdir('python_dz')
+    files = os.listdir()
+    assert 'python_dz' in files
+    os.rmdir('python_dz')
