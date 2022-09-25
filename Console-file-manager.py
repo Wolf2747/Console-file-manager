@@ -34,12 +34,12 @@ while True:
         print(os.listdir())
     elif choice == '5':
 
-        output_folders_and_files(os.path.isdir)
-
+        text_dir = output_folders_and_files(os.path.isdir,[])
+        print(text_dir)
     elif choice == '6':
 
-        output_folders_and_files(os.path.isfile)
-
+        text = output_folders_and_files(os.path.isfile,[])
+        print(text)
     elif choice == '7':
         print(sys.platform)
     elif choice == '8':
